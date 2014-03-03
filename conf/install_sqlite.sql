@@ -1,4 +1,4 @@
-create table comments (
+create table #prefix#comments (
 	id integer primary key,
 	identifier char(72) not null,
 	user int not null,
@@ -7,5 +7,5 @@ create table comments (
 	comment text not null
 );
 
-create index comments_identifier on comments (identifier, status, ts);
-create index comments_user on comments (user, status, ts);
+create index comments_identifier on #prefix#comments (identifier, status, ts);
+create index comments_user on #prefix#comments (user, status, ts);
